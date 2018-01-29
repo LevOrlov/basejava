@@ -5,16 +5,27 @@ public class ArrayStorage {
     Resume[] storage = new Resume[10000];
 
     void clear() {
+        storage = null;
+
     }
 
     void save(Resume r) {
+        int sizeStorage = storage.length;
+
+
     }
 
-    Resume get(String uuid) {
-        return null;
-    }
+    public Resume get(String uuid) {
+        for (int i = 0; i < storage.length; i++) {
+                     if (uuid.equals(storage[i].uuid))
+                         {return storage[i];}
+
+            }
+        return null;}
 
     void delete(String uuid) {
+
+
     }
 
     /**

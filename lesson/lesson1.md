@@ -80,7 +80,8 @@
 
 ![finish](https://user-images.githubusercontent.com/13649199/27245924-cab3618e-52f6-11e7-9655-4293149b4126.png)
 
-- Реализуйте класс `ArrayStorage` (вставте код в пустые методы класса): работа с `Resume` на основе массива (методы `clear, get, save, delete, getAll, size`)
+- Реализуйте класс `ArrayStorage` (вставте код в пустые методы класса):
+ работа с `Resume` на основе массива (методы `clear, get, save, delete, getAll, size`)
    - Не используйте в решении коллекции, реализацию на их основе мы добавим позднее
    - Не меняйте синтаксис методов `ArrayStorage` и не меняйте класс `Resume`. Нужет только код внутри готовых методов `ArrayStorage`
    - [Массивы](http://study-java.ru/uroki-java/massivy-v-java/)
