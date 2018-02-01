@@ -3,15 +3,18 @@
  */
 public class ArrayStorage {
     Resume[] storage = new Resume[10000];
+    public int qualResume = 0;
+
 
     void clear() {
-        storage = null;
+       // storage = null;
 
     }
 
     void save(Resume r) {
-        int sizeStorage = storage.length;
 
+        storage[qualResume] = r;
+        qualResume++;
 
     }
 
@@ -32,7 +35,7 @@ public class ArrayStorage {
      * @return array, contains only Resumes in storage (without null)
      */
     Resume[] getAll() {
-        return new Resume[0];
+        return storage;
     }
 
     int size() {
