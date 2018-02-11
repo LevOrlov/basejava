@@ -1,71 +1,58 @@
 /**
  * Array based storage for Resumes
  */
-public class ArrayStorage {
-    public int qualResume = 0;
-    Resume[] storage = new Resume[10000];
+public class ArrayStorage extends AbstractArrayStorage {
 
-    void clear() {
+    public void clear() {
         for (int i = 0; i < qualResume; i++) {
             storage[i] = null;
         }
 
     }
 
-    void save(Resume r) {
-        if (storage.length == qualResume){
-           System.out.println("База данных переполнена");
-        }
-        else {
-        storage[qualResume] = r;
-        qualResume++;
+    public void save(Resume r) {
+        if (storage.length == qualResume) {
+            System.out.println("База данных переполнена");
+        } else {
+            storage[qualResume] = r;
+            qualResume++;
         }
 
     }
 
-    void update(String uuid) {
+    public void update(Resume r) {
         for (int i = 0; i < qualResume; i++) {
-            if (uuid.equals(storage[i].uuid)) {
-                storage[i].uuid = uuid;
+            if (r.getUuid().equals(storage[i].getUuid())) {
+                storage[i].setUuid(r.getUuid());
+            } else {
+                System.out.println("Resume " + r.getUuid() + " нет в базе.");
             }
-            else {System.out.println("Resume " + uuid + " нет в базе.");}
 
         }
 
 
     }
-    public Resume get(String uuid) {
-        for (int i = 0; i < qualResume; i++) {
-            if (uuid.equals(storage[i].uuid)) {
-                return storage[i];
-            }
-            else {System.out.println("Resume " + uuid + " нет в базе.");}
 
-        }
-        return null;
-    }
-
-    void delete(String uuid) {
+    public void delete(String uuid) {
         for (int i = 0; i < qualResume; i++) {
-            if (uuid.equals(storage[i].uuid)) {
+            if (uuid.equals(storage[i].getUuid())) {
                 storage[i] = storage[qualResume - 1];
-                storage[qualResume - 1] = null;
+                storage[i].setUuid(null);
                 qualResume--;
+            } else {
+                System.out.println("Resume " + uuid + " нет в базе.");
             }
-            else {System.out.println("Resume " + uuid + " нет в базе.");}
 
         }
 
 
-
     }
-
 
 
     /**
      * @return array, contains only Resumes in storage (without null)
      */
-    Resume[] getAll() {
+    public Resume[] getAll() {
         Resume[] storage = new Resume[qualResume];
         for (int i = 0; i < qualResume; i++) {
             storage[i] = this.storage[i];
@@ -73,7 +60,13 @@ public class ArrayStorage {
         return storage;
     }
 
-    int size() {
-        return qualResume;
+    @Override
+    protected int getIndex(String uuid) {
+        for (int i = 0; i < qualResume; i++) {
+            if (uuid.equals(storage[i].getUuid())) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
