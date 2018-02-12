@@ -1,11 +1,15 @@
 import java.util.Arrays;
 
 public class SortedArrayStorage extends AbstractArrayStorage {
-    protected Resume[] storageCopySort = new Resume[10000];
+
 
     @Override
     protected int getIndex(String uuid) {
-        storageCopySort = storage.clone();
+        Resume[] storageCopySort = new Resume[qualResume];
+        for (int i = 0;i < qualResume; i++){
+            storageCopySort[i] = storage[i];
+        }
+
         Arrays.sort(storageCopySort);
         Resume searchKey = new Resume();
         searchKey.setUuid(uuid);

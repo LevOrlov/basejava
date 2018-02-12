@@ -1,4 +1,4 @@
-public abstract class AbstractArrayStorage implements Storage {
+public abstract class AbstractArrayStorage implements Storage, Comparable<Resume> {
     protected int qualResume = 0;
     protected Resume[] storage = new Resume[10000];
 
@@ -71,4 +71,8 @@ public abstract class AbstractArrayStorage implements Storage {
 
     protected abstract int getIndex(String uuid);
 
+    @Override
+    public int compareTo(Resume o) {
+        return this.compareTo(o);
+    }
 }
