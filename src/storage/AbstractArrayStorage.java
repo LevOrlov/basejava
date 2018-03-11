@@ -44,7 +44,6 @@ public abstract class AbstractArrayStorage implements Storage, Comparable<Resume
             } else {
                 System.out.println("model.Resume " + r.getUuid() + " нет в базе.");
             }
-
         }
     }
 
