@@ -1,5 +1,8 @@
 package storage;
 
+import exception.ExistStorageException;
+import exception.NotExistStorageException;
+import exception.StorageException;
 import model.Resume;
 
 import java.util.Arrays;
@@ -16,8 +19,8 @@ public abstract class AbstractArrayStorage implements Storage, Comparable<Resume
     public Resume get(String uuid) {
         int index = getIndex(uuid);
         if (index == -1) {
-            System.out.println("model.Resume " + uuid + " not exist");
-            return null;
+            throw new NotExistStorageException(uuid);
+           // return null;
         }
         return storage[index];
     }
@@ -28,29 +31,30 @@ public abstract class AbstractArrayStorage implements Storage, Comparable<Resume
     }
 
     public void save(Resume r) {
-        if (storage.length == qualResume) {
-            System.out.println("База данных переполнена");
+        int index = getIndex(r.getUuid());
+        if (index >= 0) {
+            throw new ExistStorageException(r.getUuid());
+        } else if (qualResume == 10000) {
+            throw new StorageException("Storage overflow", r.getUuid());
         } else {
-            int indexRtoInsert = getIndex(r.getUuid());
-            insertElement(r, indexRtoInsert);
+            insertElement(r, index);
             qualResume++;
         }
     }
 
     public void update(Resume r) {
-        for (int i = 0; i < qualResume; i++) {
-            if (r.getUuid().equals(storage[i].getUuid())) {
-                storage[i].setUuid(r.getUuid());
-            } else {
-                System.out.println("model.Resume " + r.getUuid() + " нет в базе.");
-            }
+        int index = getIndex(r.getUuid());
+        if (index < 0) {
+            throw new NotExistStorageException(r.getUuid());
+        } else {
+            storage[index] = r;
         }
     }
 
     public void delete(String uuid) {
         int index = getIndex(uuid);
         if (index < 0) {
-            System.out.println("Resume " + uuid + " not exist");
+            throw new NotExistStorageException(uuid);
         } else {
             fillDeletedElement(index);
             storage[qualResume - 1] = null;
