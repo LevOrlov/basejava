@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public abstract class AbstractArrayStorage implements Storage, Comparable<Resume> {
 
-    protected int qualResume = 0;
+    protected static int qualResume = 0;
     protected Resume[] storage = new Resume[10000];
 
     public int size() {
