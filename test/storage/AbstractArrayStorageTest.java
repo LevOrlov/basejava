@@ -2,19 +2,14 @@ package storage;
 
 import exception.NotExistStorageException;
 import model.Resume;
-import org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import java.lang.Exception;
 
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.Assert.*;
-import static org.junit.Assert.*;
+public abstract class AbstractArrayStorageTest {
 
-public class AbstractArrayStorageTest {
-
-    private  Storage storage =  new ArrayStorage();
-
+    private Storage storage = new ArrayStorage();
 
 
     private static final String UUID_1 = "uuid1";
@@ -31,18 +26,18 @@ public class AbstractArrayStorageTest {
 
     @Test
     public void size() throws Exception {
-        assertEquals(3,storage.size());
+        assertEquals(3, storage.size());
     }
 
     @Test
     public void get() throws Exception {
-        assertEquals( new Resume("uuid1"),storage.get("uuid1") );
+        assertEquals(new Resume("uuid1"), storage.get("uuid1"));
     }
 
     @Test
     public void clear() {
         storage.clear();
-        assertEquals(0,ArrayStorage.qualResume);
+        assertEquals(0, ArrayStorage.qualResume);
     }
 
     @Test
@@ -66,7 +61,7 @@ public class AbstractArrayStorageTest {
     @Test(expected = NotExistStorageException.class)
     public void delete() {
         storage.delete("uuid3");
-        assertEquals(2,ArrayStorage.qualResume);
+        assertEquals(2, ArrayStorage.qualResume);
 
         storage.get("uuid3");
     }
@@ -79,18 +74,8 @@ public class AbstractArrayStorageTest {
         assertEquals(new Resume("uuid2"), all[1]);
         assertEquals(new Resume("uuid3"), all[2]);
     }
-    // зависит отдельно от каждого класса.
-    @Test
-    public void getIndex() {
-    }
 
-    @Test
-    public void fillDeletedElement() {
-    }
 
-    @Test
-    public void insertElement() {
-    }
 
     @Test
     public void compareTo() {
