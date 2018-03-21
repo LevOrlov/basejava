@@ -5,9 +5,10 @@ import exception.NotExistStorageException;
 import exception.StorageException;
 import model.Resume;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
-public abstract class AbstractArrayStorage implements Storage, Comparable<Resume> {
+public abstract class AbstractArrayStorage extends AbstractStorage implements  Comparable<Resume> {
 
     protected static int qualResume = 0;
     protected Resume[] storage = new Resume[10000];

@@ -5,7 +5,7 @@ import java.util.UUID;
 /**
  * com.urise.webapp.model.model.Resume class
  */
-public class Resume implements Comparable<Resume> {
+public class Resume extends Object implements Comparable<Resume> {
 
     // Unique identifier
     private final String uuid;
