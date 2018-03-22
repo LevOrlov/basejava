@@ -3,9 +3,9 @@ package model;
 import java.util.UUID;
 
 /**
- * com.urise.webapp.model.model.Resume class
+ * ru.javawebinar.basejava.model.Resume class
  */
-public class Resume extends Object implements Comparable<Resume> {
+public class Resume implements Comparable<Resume> {
 
     // Unique identifier
     private final String uuid;
@@ -22,20 +22,6 @@ public class Resume extends Object implements Comparable<Resume> {
         return uuid;
     }
 
-    /*public void setUuid(String uuid) {
-        this.uuid = uuid;
-    }*/
-
-    @Override
-    public String toString() {
-        return uuid;
-    }
-
-    @Override
-    public int compareTo(Resume o) {
-        return uuid.compareTo(o.uuid);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -49,5 +35,15 @@ public class Resume extends Object implements Comparable<Resume> {
     @Override
     public int hashCode() {
         return uuid.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return uuid;
+    }
+
+    @Override
+    public int compareTo(Resume o) {
+        return uuid.compareTo(o.uuid);
     }
 }

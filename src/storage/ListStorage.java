@@ -1,72 +1,60 @@
 package storage;
-import model.Resume;
+
+import model.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
-public class ListStorage  extends AbstractStorage implements  Comparable<Resume>  {
-    public static void main (String[] args){
-        ListStorage list  =new ListStorage();
-        list.storage.add(new Resume("Lev"));
-        list.storage.add(new Resume("Lev1"));
-        System.out.println(list.size());
-
-       System.out.println(list.getAll());
-
-    }
-
-     protected ArrayList<Resume> storage = new ArrayList();
+public class ListStorage extends AbstractStorage {
+    private List<Resume> list = new ArrayList<>();
 
     @Override
-    public int size() {
-        return storage.size();
-    }
-
-    @Override
-    public Resume get(String uuid) {
-
-        return storage.get(storage.indexOf( new Resume(uuid)));
-    }
-
-    @Override
-    public void clear() {
-        storage.clear();
-    }
-
-    @Override
-    public void save(Resume r) {
-    storage.add(r);
-    }
-
-    @Override
-    public void update(Resume r) {
-     storage.add(storage.indexOf( r.getUuid()), r);
-    }
-
-    @Override
-    public void delete(String uuid) {
-        storage.remove(new Resume(uuid));
-    }
-
-    @Override
-    public Resume[] getAll() {
-
-        System.out.println(Arrays.toString(storage.toArray()));
+    protected Integer getSearchKey(String uuid) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getUuid().equals(uuid)) {
+                return i;
+            }
+        }
         return null;
     }
 
     @Override
-    protected int getIndex(String uuid) {
-        return storage.indexOf( new Resume(uuid));
+    protected boolean isExist(Object searchKey) {
+        return searchKey != null;
     }
 
     @Override
-    protected void fillDeletedElement(int index) {
-
+    protected void doUpdate(Resume r, Object searchKey) {
+        list.set((Integer) searchKey, r);
     }
 
     @Override
-    protected void insertElement(Resume r, int index) {
+    protected void doSave(Resume r, Object searchKey) {
+        list.add(r);
+    }
 
+    @Override
+    protected Resume doGet(Object searchKey) {
+        return list.get((Integer) searchKey);
+    }
+
+    @Override
+    protected void doDelete(Object searchKey) {
+        list.remove(((Integer) searchKey).intValue());
+    }
+
+    @Override
+    public void clear() {
+        list.clear();
+    }
+
+    @Override
+    public Resume[] getAll() {
+        return list.toArray(new Resume[list.size()]);
+    }
+
+    @Override
+    public int size() {
+        return list.size();
     }
 }

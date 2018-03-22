@@ -1,24 +1,21 @@
-import model.Resume;
-import storage.SortedArrayStorage;
 
+import model.Resume;
+import storage.ArrayStorage;
+import storage.Storage;
 /**
- * Test for com.urise.webapp.storage.storage.ArrayStorage
+ * Test ru.javawebinar.basejava.storage.ArrayStorage
  */
 public class MainTestArrayStorage {
-    static final SortedArrayStorage ARRAY_STORAGE = new SortedArrayStorage();
+    static final ArrayStorage ARRAY_STORAGE = new ArrayStorage();
 
     public static void main(String[] args) {
         Resume r1 = new Resume("uuid1");
-
         Resume r2 = new Resume("uuid2");
-       // r2.setUuid("uuid2");
         Resume r3 = new Resume("uuid3");
-       // r3.setUuid("uuid3");
 
-        ARRAY_STORAGE.save(r2);
         ARRAY_STORAGE.save(r1);
+        ARRAY_STORAGE.save(r2);
         ARRAY_STORAGE.save(r3);
-        //System.out.println("Get index: : " + ARRAY_STORAGE.getIndex(r1.uuid));
 
         System.out.println("Get r1: " + ARRAY_STORAGE.get(r1.getUuid()));
         System.out.println("Size: " + ARRAY_STORAGE.size());

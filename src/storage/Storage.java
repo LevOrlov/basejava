@@ -2,8 +2,6 @@ package storage;
 
 import model.Resume;
 
-import java.util.ArrayList;
-
 public interface Storage {
 
     void clear();
