@@ -44,6 +44,11 @@ public class ListStorage extends AbstractStorage {
     }
 
     @Override
+    public List<Resume> getAllSorted() {
+        return null;
+    }
+
+    @Override
     public void clear() {
         list.clear();
     }

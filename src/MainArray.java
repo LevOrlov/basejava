@@ -30,6 +30,7 @@ public class MainArray {
             }
             switch (params[0]) {
                 case "list":
+                    System.out.println(ARRAY_STORAGE.getAllSorted().toArray().toString());
                     printAll();
                     break;
                 case "size":
@@ -56,8 +57,12 @@ public class MainArray {
                     ARRAY_STORAGE.clear();
                     printAll();
                     break;
+                 case "listAll":
+                     ARRAY_STORAGE.getAllSorted();
+                    break;
                 case "exit":
                     return;
+
                 default:
                     System.out.println("Неверная команда.");
                     break;

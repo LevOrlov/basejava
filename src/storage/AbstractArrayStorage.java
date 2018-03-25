@@ -2,16 +2,18 @@ package storage;
 
 import exception.StorageException;
 import model.Resume;
-import storage.AbstractStorage;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Array based storage for Resumes
  */
 public abstract class AbstractArrayStorage extends AbstractStorage {
     protected static final int STORAGE_LIMIT = 10000;
-
+    protected List<Resume> list;
     protected Resume[] storage = new Resume[STORAGE_LIMIT];
     protected int size = 0;
 
@@ -34,6 +36,15 @@ public abstract class AbstractArrayStorage extends AbstractStorage {
      */
     public Resume[] getAll() {
         return Arrays.copyOfRange(storage, 0, size);
+    }
+
+   @Override
+    public List<Resume> getAllSorted() {
+
+       list = new ArrayList<>();
+       list.addAll(Arrays.asList(Arrays.copyOfRange(storage, 0, size)));
+        Collections.sort(list);
+        return list;
     }
 
     @Override
