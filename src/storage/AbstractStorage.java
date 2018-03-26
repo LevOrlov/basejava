@@ -59,4 +59,6 @@ public abstract class AbstractStorage implements Storage {
         }
         return searchKey;
     }
+
+    public abstract List<Resume> doCopyAll();
 }
