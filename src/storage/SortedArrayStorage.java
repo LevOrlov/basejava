@@ -3,6 +3,7 @@ package storage;
 import model.Resume;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class SortedArrayStorage extends AbstractArrayStorage {
 
@@ -26,5 +27,10 @@ public class SortedArrayStorage extends AbstractArrayStorage {
     protected Integer getSearchKey(String uuid) {
         Resume searchKey = new Resume(uuid);
         return Arrays.binarySearch(storage, 0, size, searchKey);
+    }
+
+    @Override
+    public List<Resume> doCopyAll() {
+        return null;
     }
 }
