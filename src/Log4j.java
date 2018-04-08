@@ -7,7 +7,7 @@ public class Log4j {
     public static void main(String[] args) throws Exception {
 
         for (int i = 0; i < 10; i++) {
-            log.info(i);
+            log.info(i+i);
 
         }
 
