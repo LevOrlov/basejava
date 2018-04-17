@@ -1,4 +1,4 @@
 package storage;
 
-abstract public class AbstractFileStorage {
+abstract public class   AbstractFileStorage {
 }
