@@ -1,10 +1,12 @@
 import java.io.*;
 
 public class MainFile {
-
+    static File file1;
+    static File[] contents1;
+    static File file;
     public static void main(String[] args) throws Exception {
-        File file = new File("C:\\Users\\Lev\\basejava");
-        File file1;
+        file = new File("C:\\Users\\Lev\\basejava");
+
        /*
         BufferedReader read = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\Lev\\basejava\\.gitignore")));
         DataOutputStream write = new DataOutputStream(new FileOutputStream("file.txt"));
@@ -19,21 +21,26 @@ public class MainFile {
 
       // for (int i=0; i< file.list().length;i++){
         //рекурсия для корневой папки. Чтобы узнать все внутренние катаологи.
-        File[] contents = file.listFiles();
-        File[] contents1;
+
+        recursion(file.getAbsolutePath().toString());
+
+    //}
+//Сделать рекурсивный обход и вывод имени файлов в каталогах и подкаталогах (корневой каталог- ваш проект)
+    }
+    public static void recursion(String s)
+    { File fileS = new File(s);
+        File[] contents = fileS.listFiles();
         for ( File f : contents) {
             file1 = new File(f.getAbsolutePath().toString());
             if (file1.isDirectory()==true){
-                contents1 = file1.listFiles();
-                {for ( File f1 : contents1){
-                    System.out.println(f1.getAbsolutePath());
-                }
+                System.out.println(file1.getAbsolutePath());
+                recursion(file1.getAbsolutePath().toString());
 
-                }
-            System.out.println();}
-          //  System.out.println(f.getAbsolutePath());
-        contents1=null;}
-    //}
+            }
+            else {System.out.println("  else "+file1.getName());}
+            }
 
+        contents1=null;
     }
+
 }
