@@ -4,6 +4,8 @@ import exception.ExistStorageException;
 import exception.NotExistStorageException;
 import model.Resume;
 
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -17,7 +19,7 @@ public abstract class AbstractStorage<SK> implements Storage {
 
     protected abstract boolean isExist(SK searchKey);
 
-    protected abstract void doSave(Resume r, SK searchKey);
+    protected abstract void doSave(Resume r, SK searchKey) throws FileNotFoundException, UnsupportedEncodingException;
 
     protected abstract Resume doGet(SK searchKey);
 
@@ -32,7 +34,7 @@ public abstract class AbstractStorage<SK> implements Storage {
         doUpdate(r, searchKey);
     }
 
-    public void save(Resume r) {
+    public void save(Resume r) throws FileNotFoundException, UnsupportedEncodingException {
         SK searchKey = getNotExistedSearchKey(r.getUuid());
         doSave(r, searchKey);
     }

@@ -2,12 +2,31 @@ package storage;
 
 import model.Resume;
 
+import java.io.File;
 import java.util.List;
 
 /**
  * Array based storage for Resumes
  */
 public class ArrayStorage extends AbstractArrayStorage {
+   static {
+        File theDir = new File("C:\\Users\\Lev\\basejava\\Storage_Resume");
+
+        if (!theDir.exists()) {
+            System.out.println("creating directory: " + theDir.getName());
+            boolean result = false;
+            try{
+                theDir.mkdir();
+                result = true;
+            }
+            catch(SecurityException se){
+                //handle it
+            }
+            if(result) {
+                System.out.println("DIR created");
+            }
+        }
+    }
 
     @Override
     protected void fillDeletedElement(int index) {

@@ -2,6 +2,8 @@ package storage;
 
 import model.Resume;
 
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public interface Storage {
@@ -11,7 +13,7 @@ public interface Storage {
 
     void update(Resume r);
 
-    void save(Resume r);
+    void save(Resume r) throws FileNotFoundException, UnsupportedEncodingException;
 
     Resume get(String uuid);
 

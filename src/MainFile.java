@@ -1,11 +1,20 @@
+import model.Resume;
+import storage.AbstractFileStorage;
+
 import java.io.*;
 
 public class MainFile {
     static File file1;
     static File[] contents1;
     static File file;
+
     public static void main(String[] args) throws Exception {
-        file = new File("C:\\Users\\Lev\\basejava");
+       // file = new File("C:\\Users\\Lev\\basejava");
+        AbstractFileStorage storageFileResume = new AbstractFileStorage();
+        storageFileResume.save(new Resume("_String"));
+      //  storageFileResume.save(new Resume("_String"));
+        System.out.println();
+        storageFileResume.get("C:\\Users\\Lev\\basejava\\Storage_Resume\\"+"_String.txt");
 
        /*
         BufferedReader read = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\Lev\\basejava\\.gitignore")));
@@ -22,7 +31,7 @@ public class MainFile {
       // for (int i=0; i< file.list().length;i++){
         //рекурсия для корневой папки. Чтобы узнать все внутренние катаологи.
 
-        recursion(file.getAbsolutePath().toString());
+        //recursion(file.getAbsolutePath().toString());
 
     //}
 //Сделать рекурсивный обход и вывод имени файлов в каталогах и подкаталогах (корневой каталог- ваш проект)
