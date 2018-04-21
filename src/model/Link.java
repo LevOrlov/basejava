@@ -2,6 +2,10 @@ package model;
 
 import java.util.Objects;
 
+/**
+ * gkislin
+ * 14.07.2016
+ */
 public class Link {
     private final String name;
     private final String url;

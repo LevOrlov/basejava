@@ -1,10 +1,7 @@
 package storage;
 
 import model.Resume;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import storage.AbstractStorage;
 
 import java.util.*;
 
@@ -33,27 +30,17 @@ public class MapUuidStorage extends AbstractStorage<String> {
 
     @Override
     protected Resume doGet(String uuid) {
-        return map.get( uuid);
+        return map.get(uuid);
     }
 
     @Override
     protected void doDelete(String uuid) {
-        map.remove( uuid);
-    }
-
-    @Override
-    public List<Resume> getAllSorted() {
-        return null;
+        map.remove(uuid);
     }
 
     @Override
     public void clear() {
         map.clear();
-    }
-
-    @Override
-    public Resume[] getAll() {
-        return new Resume[0];
     }
 
     @Override

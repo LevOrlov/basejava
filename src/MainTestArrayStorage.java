@@ -1,7 +1,6 @@
-
 import model.Resume;
 import storage.ArrayStorage;
-import storage.Storage;
+
 /**
  * Test ru.javawebinar.basejava.storage.ArrayStorage
  */
@@ -13,10 +12,10 @@ public class MainTestArrayStorage {
         Resume r2 = new Resume("uuid2");
         Resume r3 = new Resume("uuid3");
 
-        /*ARRAY_STORAGE.save(r1);
+        ARRAY_STORAGE.save(r1);
         ARRAY_STORAGE.save(r2);
         ARRAY_STORAGE.save(r3);
-*/
+
         System.out.println("Get r1: " + ARRAY_STORAGE.get(r1.getUuid()));
         System.out.println("Size: " + ARRAY_STORAGE.size());
 
@@ -33,7 +32,7 @@ public class MainTestArrayStorage {
 
     static void printAll() {
         System.out.println("\nGet All");
-        for (Resume r : ARRAY_STORAGE.getAll()) {
+        for (Resume r : ARRAY_STORAGE.getAllSorted()) {
             System.out.println(r);
         }
     }

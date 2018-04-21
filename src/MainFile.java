@@ -1,55 +1,54 @@
-import model.Resume;
-import storage.AbstractFileStorage;
 
-import java.io.*;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+/**
+ * gkislin
+ * 21.07.2016
+ */
 public class MainFile {
-    static File file1;
-    static File[] contents1;
-    static File file;
+    public static void main(String[] args) {
+        String filePath = ".\\.gitignore";
 
-    public static void main(String[] args) throws Exception {
-       // file = new File("C:\\Users\\Lev\\basejava");
-        AbstractFileStorage storageFileResume = new AbstractFileStorage();
-        storageFileResume.save(new Resume("_String"));
-      //  storageFileResume.save(new Resume("_String"));
-        System.out.println();
-        storageFileResume.get("C:\\Users\\Lev\\basejava\\Storage_Resume\\"+"_String.txt");
-
-       /*
-        BufferedReader read = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\Lev\\basejava\\.gitignore")));
-        DataOutputStream write = new DataOutputStream(new FileOutputStream("file.txt"));
-        String line;
-        while((line=read.readLine())!=null){
-            System.out.println(line);
-            write.writeChar(line.toCharArray()[0]);
+        File file = new File(filePath);
+        try {
+            System.out.println(file.getCanonicalPath());
+        } catch (IOException e) {
+            throw new RuntimeException("Error", e);
         }
 
-        write.close();*/
-
-
-      // for (int i=0; i< file.list().length;i++){
-        //рекурсия для корневой папки. Чтобы узнать все внутренние катаологи.
-
-        //recursion(file.getAbsolutePath().toString());
-
-    //}
-//Сделать рекурсивный обход и вывод имени файлов в каталогах и подкаталогах (корневой каталог- ваш проект)
-    }
-    public static void recursion(String s)
-    { File fileS = new File(s);
-        File[] contents = fileS.listFiles();
-        for ( File f : contents) {
-            file1 = new File(f.getAbsolutePath().toString());
-            if (file1.isDirectory()==true){
-                System.out.println(file1.getAbsolutePath());
-                recursion(file1.getAbsolutePath().toString());
-
+        File dir = new File("./src/ru/javawebinar/basejava");
+        System.out.println(dir.isDirectory());
+        String[] list = dir.list();
+        if (list != null) {
+            for (String name : list) {
+                System.out.println(name);
             }
-            else {System.out.println("  else "+file1.getName());}
-            }
+        }
 
-        contents1=null;
+        try (FileInputStream fis = new FileInputStream(filePath)) {
+            System.out.println(fis.read());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        printDirectoryDeeply(dir);
     }
 
+    // TODO: make pretty output
+    public static void printDirectoryDeeply(File dir) {
+        File[] files = dir.listFiles();
+
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile()) {
+                    System.out.println("File: " + file.getName());
+                } else if (file.isDirectory()) {
+                    System.out.println("Directory: " + file.getName());
+                    printDirectoryDeeply(file);
+                }
+            }
+        }
+    }
 }

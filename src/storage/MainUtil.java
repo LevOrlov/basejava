@@ -1,4 +1,3 @@
-package storage;
 
 public class MainUtil {
     public static void main(String[] args) {

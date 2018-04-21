@@ -2,24 +2,23 @@ package storage;
 
 import model.Resume;
 
-import java.io.FileNotFoundException;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public interface Storage {
-
 
     void clear();
 
     void update(Resume r);
 
-    void save(Resume r) throws FileNotFoundException, UnsupportedEncodingException;
+    void save(Resume r);
 
     Resume get(String uuid);
 
     void delete(String uuid);
 
-    Resume[] getAll();
+    /**
+     * @return array, contains only Resumes in storage (without null)
+     */
     List<Resume> getAllSorted();
 
     int size();
