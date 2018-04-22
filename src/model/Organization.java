@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.Objects;
 import static util.DateUtil.NOW;
 import static util.DateUtil.of;
 
-public class Organization {
+public class Organization implements Serializable {
     private final Link homePage;
     private List<Position> positions = new ArrayList<>();
 
@@ -52,7 +53,7 @@ public class Organization {
         private final String title;
         private final String description;
 
-        public Position(int startYear, Month startMonth, String title, String description, LocalDate startDate) {
+        public Position(int startYear, Month startMonth, String title, String description) {
             this(of(startYear, startMonth), NOW, title, description);
         }
 
