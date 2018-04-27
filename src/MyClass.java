@@ -1,4 +1,11 @@
 import java.io.*;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import myPackage.TestSerial;
 import org.w3c.dom.Document;
@@ -19,9 +26,37 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+ class FileVisitor implements java.nio.file.FileVisitor<Path> {
+    public FileVisitResult visitFile(Path path,
+                                     BasicFileAttributes fileAttributes) {
+       // System.out.println("file name:" + path.getFileName());
+        return FileVisitResult.CONTINUE;
+    }
 
+    public FileVisitResult preVisitDirectory(Path path,
+                                             BasicFileAttributes fileAttributes) {
+        for (int i=3; i< path.getNameCount();i++){
+            System.out.print("\t");
+        }
+        System.out.println("Directory name:" + path);
+
+        return FileVisitResult.CONTINUE;
+    }
+     public FileVisitResult visitFileFailed(Path file, IOException exc)
+             throws IOException {
+         System.out.println("visitFileFailed: " + file);
+         return FileVisitResult.CONTINUE;
+     }
+
+
+     public FileVisitResult postVisitDirectory(Path dir, IOException exc)
+             throws IOException {
+         //System.out.println("postVisitDirectory: " + dir);
+         return FileVisitResult.CONTINUE;
+     }
+}
 public class MyClass {
-    public static void main(String args[]) throws IOException, ClassNotFoundException {
+   /* public static void main(String args[]) throws IOException, ClassNotFoundException {
         FileOutputStream fos = new FileOutputStream("temp.out");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         TestSerial ts = new TestSerial();
@@ -72,5 +107,74 @@ public class MyClass {
             e.printStackTrace();
         }
 
+    }*/
+
+ /*  //STREAM
+   public static void main(String[] args) {
+       Stream.of(1, 2, 3)
+               .forEach(System.out::println);
+   }*/
+
+
+  /*  public static void main(String[] args) {
+        Path pathSource = Paths.get("C:\\Users\\Lev\\basejava\\temp.out");
+        try {
+            Files.createFile(pathSource);
+           // Files.delete(pathSource);
+            System.out.println("File deleted successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }*/
+
+
+
+    public static void main(String[] args) throws IOException {
+
+        Path pathSource = Paths.get("C:/Users/Lev/basejava");
+        String path;
+        path = pathSource+"\\kdkd";
+        pathSource=Paths.get(path);
+        System.out.println(pathSource.getFileName());
+
+       /* try {
+
+            Files.walkFileTree(pathSource, new FileVisitor());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        /*String pathString = "C:\\Users\\Lev\\basejava";
+        Files.walkFileTree(Paths.get(pathString), new FileVisitor<Path>() {
+            @Override
+            public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs)
+                    throws IOException {
+                System.out.println("preVisitDirectory: " + dir);
+                return FileVisitResult.CONTINUE;
+            }
+
+            @Override
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
+                    throws IOException {
+                System.out.println("visitFile: " + file);
+                return FileVisitResult.CONTINUE;
+            }
+
+            @Override
+            public FileVisitResult visitFileFailed(Path file, IOException exc)
+                    throws IOException {
+                System.out.println("visitFileFailed: " + file);
+                return FileVisitResult.CONTINUE;
+            }
+
+            @Override
+            public FileVisitResult postVisitDirectory(Path dir, IOException exc)
+                    throws IOException {
+                System.out.println("postVisitDirectory: " + dir);
+                return FileVisitResult.CONTINUE;
+            }
+        });
+*/
+
     }
 }
+
