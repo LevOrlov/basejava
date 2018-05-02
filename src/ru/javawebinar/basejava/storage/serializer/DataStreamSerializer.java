@@ -33,6 +33,7 @@ public class DataStreamSerializer implements StreamSerializer {
     @Override
     public Resume doRead(InputStream is) throws IOException {
         try (DataInputStream dis = new DataInputStream(is)) {
+            System.out.println("fuck");
             String uuid = dis.readUTF();
             String fullName = dis.readUTF();
             Resume resume = new Resume(uuid, fullName);

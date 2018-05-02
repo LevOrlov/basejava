@@ -23,14 +23,16 @@ public class Data_Example {
         DataStreamSerializer dataStreamSerializer  =new DataStreamSerializer();
 
         OutputStream output = new FileOutputStream("C:\\Users\\Lev\\basejava\\file.txt");
-        InputStream input = new FileInputStream("C:\\Users\\Lev\\basejava\\file.txt");
+        FileInputStream input = new FileInputStream("C:\\Users\\Lev\\basejava\\file.txt");
         dataStreamSerializer.doWrite(R1,output);
-        System.out.println(dataStreamSerializer.doRead(input).toString());
 
+        Map map=dataStreamSerializer.doRead(input).getAllSection();
+        System.out.println(dataStreamSerializer.doRead(input).toString());
+        map.forEach((key, value) -> System.out.println(key + ", " + value));
 
         //почему то после первого вывода закрывается поток??? ВАЙ?
-     /*   Map map=dataStreamSerializer.doRead(input).getAllSection();
-        map.forEach((key, value) -> System.out.println(key + ", " + value));*/
+
+
 
     }
 }

@@ -1,60 +1,39 @@
-import java.io.*;
-import java.nio.file.*;
+import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Path;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import myPackage.TestSerial;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
- class FileVisitor implements java.nio.file.FileVisitor<Path> {
+class FileVisitor implements java.nio.file.FileVisitor<Path> {
     public FileVisitResult visitFile(Path path,
                                      BasicFileAttributes fileAttributes) {
-       // System.out.println("file name:" + path.getFileName());
+        // System.out.println("file name:" + path.getFileName());
         return FileVisitResult.CONTINUE;
     }
 
     public FileVisitResult preVisitDirectory(Path path,
                                              BasicFileAttributes fileAttributes) {
-        for (int i=3; i< path.getNameCount();i++){
+        for (int i = 3; i < path.getNameCount(); i++) {
             System.out.print("\t");
         }
         System.out.println("Directory name:" + path);
 
         return FileVisitResult.CONTINUE;
     }
-     public FileVisitResult visitFileFailed(Path file, IOException exc)
-             throws IOException {
-         System.out.println("visitFileFailed: " + file);
-         return FileVisitResult.CONTINUE;
-     }
+
+    public FileVisitResult visitFileFailed(Path file, IOException exc)
+            throws IOException {
+        System.out.println("visitFileFailed: " + file);
+        return FileVisitResult.CONTINUE;
+    }
 
 
-     public FileVisitResult postVisitDirectory(Path dir, IOException exc)
-             throws IOException {
-         //System.out.println("postVisitDirectory: " + dir);
-         return FileVisitResult.CONTINUE;
-     }
+    public FileVisitResult postVisitDirectory(Path dir, IOException exc)
+            throws IOException {
+        //System.out.println("postVisitDirectory: " + dir);
+        return FileVisitResult.CONTINUE;
+    }
 }
+
 public class MyClass {
    /* public static void main(String args[]) throws IOException, ClassNotFoundException {
         FileOutputStream fos = new FileOutputStream("temp.out");
@@ -128,14 +107,14 @@ public class MyClass {
     }*/
 
 
-
     public static void main(String[] args) throws IOException {
+        System.out.println(null == null);
 
-        Path pathSource = Paths.get("C:/Users/Lev/basejava");
+        /*Path pathSource = Paths.get("C:/Users/Lev/basejava");
         String path;
         path = pathSource+"\\kdkd";
         pathSource=Paths.get(path);
-        System.out.println(pathSource.getFileName());
+        System.out.println(pathSource.getFileName());*/
 
        /* try {
 
