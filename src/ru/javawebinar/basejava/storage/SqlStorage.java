@@ -48,11 +48,37 @@ public class SqlStorage implements Storage {
                 });// end SqlHelper
     }
 
+    //Update two tables
+   /* UPDATE resume r
+    SET full_name = 'Lev'
+    FROM resume
+    JOIN contact c
+    ON uuid = c.resume_uuid AND c.type = 'SKYPE'
+
+    WHERE r.uuid = '7a1ee819-cc67-4ed1-8227-0e567a617501';
+
+    UPDATE contact
+    SET value = '89111925650'
+    WHERE resume_uuid = '7a1ee819-cc67-4ed1-8227-0e567a617501' AND value = '0';*/
     @Override
     public void update(Resume r) {
-        sqlHelper.execute("UPDATE resume SET full_name = ? WHERE uuid = ?", ps -> {
-            ps.setString(1, r.getFullName());
-            ps.setString(2, r.getUuid());
+        sqlHelper.execute("UPDATE resume  SET full_name = ?"+
+                        "WHERE uuid = 'uuid1'",
+                ps -> {
+                    ps.setString(1, r.getFullName());
+                    //ps.setString(2, r.getUuid());
+
+                    if (ps.executeUpdate() == 0) {
+                        throw new NotExistStorageException(r.getUuid());
+                    }
+                    return null;
+                });
+
+        sqlHelper.execute("UPDATE contact SET value = '89111925650'  " +
+                "WHERE resume_uuid = 'uuid1' AND type = 'PHONE'", ps -> {
+            //ps.setString(1, r.getFullName());
+            //ps.setString(2, r.getUuid());
+
             if (ps.executeUpdate() == 0) {
                 throw new NotExistStorageException(r.getUuid());
             }

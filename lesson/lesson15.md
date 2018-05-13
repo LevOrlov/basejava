@@ -4,7 +4,7 @@
 
 ### HTML, Tomcat
 - <a href="http://java-course.ru/student/book1/servlet/">Протокол HTTP</a>. Смотрим <a href="http://topjava.herokuapp.com/">демо приложение<a/> в Chrome -> Инструменты разработчика
-- Добавление в проект Web Facet. web.xml. Постороение/cтруктура WAR. Статические ресурсы.
+- Добавление в проект web.Web Facet. web.xml. Постороение/cтруктура WAR. Статические ресурсы.
 - Настройка и деплой в Tomcat. Tomcat manager.
 - Запуск Tomcat из IDEA. Динамическое обновление без передеплоя.
 
