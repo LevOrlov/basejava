@@ -1,11 +1,13 @@
-INFO main JSON_Example - Hello this is a debug message
-INFO main JSON_Example - JsonParser.write
-INFO main JSON_Example - JsonParser.write
-INFO 15:49:22,959 main JSON_Example - JsonParser.write
-INFO 15:49:22,959 main JSON_Example - JsonParser.write
-INFO 19:16:30,120 main JSON_Example - JsonParser.write
-INFO 19:16:30,173 main JSON_Example - JsonParser.write
-INFO 19:16:52,490, main JSON_Example - JsonParser.write
-INFO 19:16:52,509, main JSON_Example - JsonParser.write
-INFO 19:17:38,527 [main] [JSON_Example] - JsonParser.write
-INFO 19:17:38,584 [main] [JSON_Example] - JsonParser.write
+INFO main web.JSON_Example - Hello this is a debug message
+INFO main web.JSON_Example - JsonParser.write
+INFO main web.JSON_Example - JsonParser.write
+INFO 15:49:22,959 main web.JSON_Example - JsonParser.write
+INFO 15:49:22,959 main web.JSON_Example - JsonParser.write
+INFO 19:16:30,120 main web.JSON_Example - JsonParser.write
+INFO 19:16:30,173 main web.JSON_Example - JsonParser.write
+INFO 19:16:52,490, main web.JSON_Example - JsonParser.write
+INFO 19:16:52,509, main web.JSON_Example - JsonParser.write
+INFO 19:17:38,527 [main] [web.JSON_Example] - JsonParser.write
+INFO 19:17:38,584 [main] [web.JSON_Example] - JsonParser.write
+INFO 21:40:51,760 [main] [web.JSON_Example] - JsonParser.write
+INFO 21:40:51,807 [main] [web.JSON_Example] - JsonParser.write

@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:40 +0300] "GET / HTTP/1.1" 200 599
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:40 +0300] "GET /images/springsource.png HTTP/1.1" 404 1101
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:45 +0300] "GET /Hello.jsp HTTP/1.1" 200 460
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:45 +0300] "GET /images/springsource.png HTTP/1.1" 404 1101
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:51 +0300] "GET /manager HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:51 +0300] "GET /manager/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:51 +0300] "GET /manager/html HTTP/1.1" 401 2536
+0:0:0:0:0:0:0:1 - tomcat [15/May/2018:19:21:52 +0300] "GET /manager/html HTTP/1.1" 200 20506
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:52 +0300] "GET /manager/images/tomcat.gif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:21:52 +0300] "GET /manager/images/asf-logo.svg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - tomcat [15/May/2018:19:21:55 +0300] "POST /manager/html/undeploy?path=/basejava_Web%20exploded&org.apache.catalina.filters.CSRF_NONCE=9BE7DF01FEBA52ABE177B6EA6D5488CA HTTP/1.1" 200 18671
+0:0:0:0:0:0:0:1 - tomcat [15/May/2018:19:22:03 +0300] "POST /manager/html/upload?org.apache.catalina.filters.CSRF_NONCE=AFFED72F72498E7C3781FFE21B5E806A HTTP/1.1" 200 20506
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:22:05 +0300] "GET /basejava_Web%20exploded/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:22:05 +0300] "GET /basejava_Web%20exploded/images/springsource.png HTTP/1.1" 404 1129
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:22:08 +0300] "GET /basejava_Web%20exploded/Hello.jsp HTTP/1.1" 200 460
+0:0:0:0:0:0:0:1 - - [15/May/2018:19:22:08 +0300] "GET /basejava_Web%20exploded/images/springsource.png HTTP/1.1" 404 1129

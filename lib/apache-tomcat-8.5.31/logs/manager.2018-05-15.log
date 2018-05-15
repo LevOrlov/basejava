@@ -1,0 +1,6 @@
+15-May-2018 19:21:52.774 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+15-May-2018 19:21:52.774 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log HTMLManager: init: Global resources are available
+15-May-2018 19:21:52.778 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+15-May-2018 19:21:54.663 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationContext.log HTMLManager: undeploy: Undeploying web application at '/basejava_Web exploded'
+15-May-2018 19:21:55.358 INFO [http-nio-8080-exec-3] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'
+15-May-2018 19:22:03.947 INFO [http-nio-8080-exec-10] org.apache.catalina.core.ApplicationContext.log HTMLManager: list: Listing contexts for virtual host 'localhost'

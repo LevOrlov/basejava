@@ -1,0 +1,90 @@
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jre-9.0.1
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           9.0.1+11
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31
+15-May-2018 19:21:21.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\conf\logging.properties
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\temp
+15-May-2018 19:21:21.505 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre-9.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-9.0.1\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files\Java\jdk-9.0.1;C:\Program Files\Java\jre-9.0.1;C:\Users\Lev\AppData\Local\Microsoft\WindowsApps;.]
+15-May-2018 19:21:21.583 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+15-May-2018 19:21:21.802 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-May-2018 19:21:21.802 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+15-May-2018 19:21:21.802 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-May-2018 19:21:21.818 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1052 ms
+15-May-2018 19:21:21.911 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+15-May-2018 19:21:21.911 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+15-May-2018 19:21:21.958 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\basejava_Web exploded.war]
+15-May-2018 19:21:24.357 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-May-2018 19:21:25.232 WARNING [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [656] milliseconds.
+15-May-2018 19:21:25.373 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\basejava_Web exploded.war] has finished in [3,415] ms
+15-May-2018 19:21:25.420 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\helloworld.war]
+15-May-2018 19:21:25.513 SEVERE [localhost-startStop-1] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Parse error in application web.xml file at [file:/C:/Users/Lev/basejava/lib/apache-tomcat-8.5.31/webapps/helloworld/WEB-INF/web.xml]
+ java.io.FileNotFoundException: Could not resolve XML resource [null] with public ID [-//Sun Microsystems, Inc.//DTD web.Web Application 2.3//EN], system ID [http://java.sun.com/dtd/web-app_2_3.dtd] and base URI [file:/C:/Users/Lev/basejava/lib/apache-tomcat-8.5.31/webapps/helloworld/WEB-INF/web.xml] to a known, local entity.
+	at org.apache.tomcat.util.descriptor.LocalResolver.resolveEntity(LocalResolver.java:155)
+	at java.xml/com.sun.org.apache.xerces.internal.util.EntityResolver2Wrapper.resolveEntity(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.resolveEntityAsPerStax(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1521)
+	at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:119)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1104)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:765)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5154)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:985)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1857)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+15-May-2018 19:21:25.529 SEVERE [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+15-May-2018 19:21:25.576 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+15-May-2018 19:21:25.576 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/helloworld] startup failed due to previous errors
+15-May-2018 19:21:25.592 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\helloworld.war] has finished in [172] ms
+15-May-2018 19:21:25.607 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\docs]
+15-May-2018 19:21:25.732 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\docs] has finished in [125] ms
+15-May-2018 19:21:25.732 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\examples]
+15-May-2018 19:21:26.420 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\examples] has finished in [672] ms
+15-May-2018 19:21:26.420 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\host-manager]
+15-May-2018 19:21:26.467 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\host-manager] has finished in [47] ms
+15-May-2018 19:21:26.467 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\manager]
+15-May-2018 19:21:26.513 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\manager] has finished in [46] ms
+15-May-2018 19:21:26.513 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\ROOT]
+15-May-2018 19:21:26.967 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-May-2018 19:21:26.982 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\ROOT] has finished in [469] ms
+15-May-2018 19:21:26.998 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+15-May-2018 19:21:27.014 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+15-May-2018 19:21:27.014 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 5206 ms
+15-May-2018 19:21:55.354 INFO [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/basejava_Web exploded]
+15-May-2018 19:22:01.555 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\basejava_Web exploded.war]
+15-May-2018 19:22:03.947 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\Lev\basejava\lib\apache-tomcat-8.5.31\webapps\basejava_Web exploded.war] has finished in [2,392] ms
