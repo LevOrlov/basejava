@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static ru.javawebinar.basejava.model.ContactType.MAIL;
 import static ru.javawebinar.basejava.model.ContactType.PHONE;
 
 
@@ -41,14 +42,16 @@ public final class Web extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
-        PrintWriter writer = response.getWriter();
+       request.setAttribute("resumes", storage.get("1c4b1380-4589-44be-b2fc-468d7c30d92f"));
+        request.getRequestDispatcher("/WEB-INF/jsp/list.jsp").forward(request, response);
+        /*PrintWriter writer = response.getWriter();
         writer.println("Got Connection");
         //  storage.delete("uuid1");
-
+        writer.println(storage.get("1c4b1380-4589-44be-b2fc-468d7c30d92f").getFullName());
         writer.println(storage.get("1c4b1380-4589-44be-b2fc-468d7c30d92f").getContact(PHONE));
+        writer.println(storage.get("1c4b1380-4589-44be-b2fc-468d7c30d92f").getContact(MAIL));
        // storage.getAllSorted();
-        writer.println("Got Connection");
+        writer.println("Got Connection");*/
 
 
     }

@@ -1,16 +1,34 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lev
-  Date: 5/21/2018
-  Time: 10:44 AM
-  To change this template use File | Settings | File Templates.
---%>
+
+<%@ page import="ru.javawebinar.basejava.model.ContactType" %>
+<%@ page import="ru.javawebinar.basejava.model.Resume" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Titdle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Список всех резюме</title>
 </head>
 <body>
-
+<section>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <% Resume resume = (Resume) request.getAttribute("resumes");         %>
+        <tr>
+            <td><a href="resume?uuid=<%=resume.getUuid()%>"><%=resume.getFullName()%></a>
+            </td>
+            <td><%=resume.getContact(ContactType.MAIL)%>
+            </td>
+            <td><%=resume.getContact(ContactType.PHONE)%>
+            </td>
+        </tr>
+        <%
+        %>
+    </table>
+</section>
 </body>
 </html>
